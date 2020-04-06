@@ -1,0 +1,4 @@
+# Project exclude paths
+/dafengsu-springboot-demo01/target/
+/dafengsu-springboot-user/target/
+/http-demo/target/
