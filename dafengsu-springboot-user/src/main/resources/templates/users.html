@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+            font-size: 14px;
+            width: 80%;
+            margin: auto;
+        }
+        table,th,td {
+            border: 1px solid darkslategray;
+            padding: 10px;
+        }
+    </style>
+</head>
+<div style="text-align: center">
+    <span style="color: darkslategray;font-size: 30px">欢迎光临</span>
+    <hr/>
+    <table class="list">
+        <tr>
+            <td>id</td>
+            <td>密码</td>
+            <td>电话</td>
+            <td>创建日期</td>
+        </tr>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.password}">123</td>
+            <td th:text="${user.phone}">13464664</td>
+            <td th:text="${user.created}">2018-2-2 12:22:30</td>
+        </tr>
+    </table>
+
+</div>
+<body>
+
+</body>
+</html>
