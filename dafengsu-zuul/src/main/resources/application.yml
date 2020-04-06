@@ -5,6 +5,12 @@ spring:
     name: dafengsu-zuul
 zuul:
   routes:
-    service-provider: #路由名称，习惯上服务名称
-      path: 
-      url:
+    service-provider: /service-provider/** #路由名称，习惯上服务名称
+  prefix: /api
+#      path: /service-provider/**
+#      url:  http://localhost:8081
+#      serviceId: service-provider
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:10086/eureka
